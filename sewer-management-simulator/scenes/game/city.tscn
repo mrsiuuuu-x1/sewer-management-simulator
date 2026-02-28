@@ -2,35 +2,79 @@
 
 [ext_resource type="Script" uid="uid://486tbogsiglk" path="res://sewer-management-simulator/scripts/city.gd" id="1_0hlc8"]
 [ext_resource type="PackedScene" uid="uid://kakrhyi0vp8l" path="res://sewer-management-simulator/scenes/game/player.tscn" id="1_vj43f"]
+[ext_resource type="Texture2D" uid="uid://bfcute8iwqm0f" path="res://sewer-management-simulator/assets/1.png" id="2_gnehe"]
+[ext_resource type="Script" uid="uid://bch8el14dbwkx" path="res://sewer-management-simulator/scripts/parallax_background.gd" id="2_grm3x"]
 [ext_resource type="Texture2D" uid="uid://ciww03ldofhxs" path="res://icon.svg" id="3_dhta8"]
+[ext_resource type="Texture2D" uid="uid://dycma00j2bqq0" path="res://sewer-management-simulator/assets/2.png" id="3_grm3x"]
+[ext_resource type="Texture2D" uid="uid://dljdma1xywcb6" path="res://sewer-management-simulator/assets/3.png" id="4_4fvpd"]
+[ext_resource type="Texture2D" uid="uid://c0apxea4rxv3h" path="res://sewer-management-simulator/assets/4.png" id="5_aak1b"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_03rho"]
-distance = -398.0
+distance = -400.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hlc8"]
-size = Vector2(127, 127)
+size = Vector2(67, 58)
 
 [node name="City" type="Node2D" unique_id=1938485632]
 script = ExtResource("1_0hlc8")
 
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1747197230]
+script = ExtResource("2_grm3x")
+
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1153456959]
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer1" unique_id=425381762]
+position = Vector2(579.49994, 281)
+scale = Vector2(2.0086803, 1.7283949)
+texture = ExtResource("2_gnehe")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=323823158]
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=1332208296]
+position = Vector2(580.49994, 282.5)
+scale = Vector2(2.0052083, 1.7314814)
+texture = ExtResource("3_grm3x")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=166363584]
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" unique_id=1457887659]
+position = Vector2(579.49994, 281.50003)
+scale = Vector2(2.0086803, 1.7376544)
+texture = ExtResource("4_4fvpd")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1482034132]
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4" unique_id=45713515]
+position = Vector2(577.5, 281.75)
+scale = Vector2(1.9947916, 1.7299384)
+texture = ExtResource("5_aak1b")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1657655057]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=275042622]
-position = Vector2(321, -7)
+position = Vector2(569, 114)
 shape = SubResource("WorldBoundaryShape2D_03rho")
 
 [node name="SpawnPoint" type="Node2D" parent="." unique_id=1842645669]
 
 [node name="Player" parent="." unique_id=1774714180 instance=ExtResource("1_vj43f")]
-position = Vector2(243, 329)
+position = Vector2(546, 455)
 
 [node name="Manhole" type="Area2D" parent="." unique_id=1329027110]
-position = Vector2(302, 0)
+position = Vector2(605, 138)
 
 [node name="Sprite2D" type="Sprite2D" parent="Manhole" unique_id=635969590]
-position = Vector2(99, 328)
+position = Vector2(80.00001, 324)
+scale = Vector2(0.5390627, 0.46875)
 texture = ExtResource("3_dhta8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Manhole" unique_id=1967881671]
-position = Vector2(98.5, 327.5)
+position = Vector2(80.5, 324)
 shape = SubResource("RectangleShape2D_0hlc8")
