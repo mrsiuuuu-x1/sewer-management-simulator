@@ -1,3 +1,8 @@
 [gd_scene format=3 uid="uid://bbi2haho10lqc"]
 
+[ext_resource type="Script" uid="uid://bivaelw1x8bsx" path="res://sewer-management-simulator/scripts/grid_manager.gd" id="1_7dw1b"]
+
 [node name="Sewer" type="Node2D" unique_id=1410554304]
+script = ExtResource("1_7dw1b")
+
+[node name="Grid" type="TileMapLayer" parent="." unique_id=305183702]

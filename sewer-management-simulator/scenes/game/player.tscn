@@ -1,3 +1,19 @@
 [gd_scene format=3 uid="uid://kakrhyi0vp8l"]
 
-[node name="Player" type="Node2D" unique_id=1144940277]
+[ext_resource type="Script" uid="uid://c5lwqkcdjdcjf" path="res://sewer-management-simulator/scripts/player.gd" id="1_tqct3"]
+[ext_resource type="Texture2D" uid="uid://ciww03ldofhxs" path="res://icon.svg" id="2_w3mte"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3dh6i"]
+size = Vector2(128, 127)
+
+[node name="Player" type="CharacterBody2D" unique_id=1774714180]
+position = Vector2(547, 294)
+script = ExtResource("1_tqct3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1749713766]
+position = Vector2(0, -1)
+texture = ExtResource("2_w3mte")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=511333247]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_3dh6i")
