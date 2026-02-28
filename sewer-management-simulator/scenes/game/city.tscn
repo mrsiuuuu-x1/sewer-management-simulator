@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dljdma1xywcb6" path="res://sewer-management-simulator/assets/3.png" id="4_4fvpd"]
 [ext_resource type="Texture2D" uid="uid://c0apxea4rxv3h" path="res://sewer-management-simulator/assets/4.png" id="5_aak1b"]
 [ext_resource type="Texture2D" uid="uid://bq5r1600xqumh" path="res://sewer-management-simulator/assets/roads.png" id="7_4fvpd"]
+[ext_resource type="Texture2D" uid="uid://8o6x4v5ityo3" path="res://sewer-management-simulator/assets/City background layer1.png" id="7_u2grn"]
+[ext_resource type="Texture2D" uid="uid://dpwt0eu6fcu7u" path="res://sewer-management-simulator/assets/City background layer2.png" id="8_f5wal"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_03rho"]
 distance = -400.0
@@ -472,6 +474,23 @@ motion_mirroring = Vector2(576, 0)
 position = Vector2(577.5, 281.75)
 scale = Vector2(1.9947916, 1.7299384)
 texture = ExtResource("5_aak1b")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1621970061]
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5" unique_id=1791397361]
+position = Vector2(577.5, 281.75)
+scale = Vector2(1.9947916, 1.7299384)
+texture = ExtResource("7_u2grn")
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground" unique_id=85171225]
+motion_mirroring = Vector2(576, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6" unique_id=984907960]
+position = Vector2(577.5, 281.75)
+scale = Vector2(1.9947916, 1.7299384)
+texture = ExtResource("8_f5wal")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1657655057]
 
