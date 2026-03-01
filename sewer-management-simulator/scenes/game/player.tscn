@@ -7,7 +7,7 @@
 size = Vector2(68, 60)
 
 [node name="Player" type="CharacterBody2D" unique_id=1774714180]
-position = Vector2(571, 335)
+position = Vector2(577, 325)
 script = ExtResource("1_tqct3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1749713766]
@@ -18,3 +18,5 @@ texture = ExtResource("2_w3mte")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=511333247]
 position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_3dh6i")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1065866785]

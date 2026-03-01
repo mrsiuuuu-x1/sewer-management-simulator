@@ -9,10 +9,9 @@ func _physics_process(delta):
         direction.x += 1
     if Input.is_action_pressed("ui_left"):
         direction.x -= 1
-    if Input.is_action_pressed("ui_up"):
-        direction.y -= 1
-    if Input.is_action_pressed("ui_down"):
-        direction.y += 1
     
     velocity = direction.normalized() * SPEED
     move_and_slide()
+
+    var screen_width = get_viewport_rect().size.x
+    position.x = clamp(position.x, 0, screen_width)
